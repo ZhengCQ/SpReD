@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: spred-git
+Version: 0.1.0
+Summary: Splicing-regulatory Driver Genes Identification Tool
+Home-page: https://github.com/yourusername/spred-git
+Author: Chenqing Zheng
+Author-email: zhengchenqing@qq.com
+License: BSD-3-Clause
+Project-URL: Bug Tracker, https://github.com/yourusername/spred-git/issues
+Project-URL: Documentation, https://spred-git.readthedocs.io/
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.21.0
+Requires-Dist: pandas>=1.3.0
+Requires-Dist: scikit-learn>=1.0.0
+Requires-Dist: click>=8.0.0
+Requires-Dist: requests>=2.26.0

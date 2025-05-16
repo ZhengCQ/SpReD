@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+src/spred.egg-info/PKG-INFO
+src/spred.egg-info/SOURCES.txt
+src/spred.egg-info/dependency_links.txt
+src/spred.egg-info/entry_points.txt
+src/spred.egg-info/requires.txt
+src/spred.egg-info/top_level.txt
