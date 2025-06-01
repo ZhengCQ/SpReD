@@ -1,9 +1,0 @@
-LICENSE
-README.md
-setup.py
-src/spred_git.egg-info/PKG-INFO
-src/spred_git.egg-info/SOURCES.txt
-src/spred_git.egg-info/dependency_links.txt
-src/spred_git.egg-info/entry_points.txt
-src/spred_git.egg-info/requires.txt
-src/spred_git.egg-info/top_level.txt

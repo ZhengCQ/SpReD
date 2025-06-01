@@ -164,7 +164,7 @@ def run_enrich(infile, outdir, protein_coding, multitest, gene_columns,
 def enrich(infile, outdir, protein_coding, multitest, gene_columns,
             padjust_columns, pval_columns, gene_type_columns, filter_sig_by,
             species, prefix,filter_lfc,lfc_columns, gene_sets):
-    """Analyze CLI wrapper"""
+    """Functional enrichment for genes"""
     run_enrich(infile, outdir, protein_coding, multitest, gene_columns,
             padjust_columns, pval_columns, gene_type_columns, filter_sig_by,
             species, prefix,filter_lfc,lfc_columns, gene_sets)

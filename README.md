@@ -10,15 +10,22 @@ Python (recommended version >= 3.7)
 
 ## Installation
 
-#### Step 1: Setup tools
+### Pip 
 ```
-git clone https://github.com/ZhengCQ/SpReD.git
-cd SpReD
-pip install -e ./
+conda create -n SpReD python==3.8
+conda activate SpReD
+pip install spred
 ```
 
 
-## Demo
+## Input files
+### matrix
+
+### group
+
+
+## Quick start
 ```
-spred run-all -m matrix.count.input.tsv -e group.tsv -g Group_name -c1 Case_name -c2 Control_name -o outdir_name --species mouse/human
+spred run-all -m matrix.count.input.tsv -e group.tsv -g Group_name -c1 Case_name -c2 Control_name -o outdir_name --species human
 ```
+

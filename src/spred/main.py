@@ -7,7 +7,7 @@ from .commands.run_all import run_all
 
 @click.group()
 def cli():
-    """Splicing-regulatory Driver Genes Identification Tool"""
+    """Splicing-regulatory Driver Genes (SDG) Identification Tool"""
     pass
 
 cli.add_command(analyze)

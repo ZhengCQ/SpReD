@@ -207,7 +207,7 @@ def run_plot_manhan(infile, pval_columns, padjust_columns, outdir, prefix, log10
 
 def plot_volcano(infile, filter_lfc,pval_columns, padjust_columns,
                  lfc_columns, filter_sig_by, outdir,prefix):
-    """Analyze CLI wrapper"""
+    """Volcano plot"""
     run_plot_volcano(infile, filter_lfc,pval_columns, padjust_columns,
                  lfc_columns, filter_sig_by, outdir,prefix)
 
@@ -230,7 +230,7 @@ def plot_volcano(infile, filter_lfc,pval_columns, padjust_columns,
 @click.option('--gene-columns', default='gene_name',
               help='Column name for gene symbols in the input file.')
 def plot_manhan(infile, pval_columns, padjust_columns, outdir, prefix, log10_cutoff, highlight_genes,gene_columns):
-    """Analyze CLI wrapper"""
+    """Manhattan plot"""
     run_plot_manhan(infile, pval_columns, padjust_columns, outdir, prefix, log10_cutoff, highlight_genes,gene_columns)
 
 

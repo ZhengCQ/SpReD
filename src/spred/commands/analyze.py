@@ -129,5 +129,7 @@ def run_analyze(matrix, metadata, group, case, control, covariates, outdir, prot
 
 
 def analyze(matrix, metadata, group, case, control, covariates, outdir, protein_coding,species,reference_source):
-    """Analyze CLI wrapper"""
+    """Analyze DGE, DTE and SDG(sdGene) between groups"""
+    ## differential gene expression (DGE), differential transcript expression (DTE), and splicing regulation driver genes (SDG/sdGenes)
     run_analyze(matrix, metadata, group, case, control, covariates, outdir, protein_coding,species,reference_source)
+    

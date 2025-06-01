@@ -3,3 +3,11 @@ pandas
 numpy
 scipy
 statsmodels
+pydeseq2==0.4.4
+gseapy==1.0.6
+seaborn==0.13.2
+
+[test]
+pytest
+pytest-cov
+click

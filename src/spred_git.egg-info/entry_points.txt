@@ -1,3 +1,0 @@
-[console_scripts]
-spred = spred.cli:main
-spred-git = spred.cli:main
