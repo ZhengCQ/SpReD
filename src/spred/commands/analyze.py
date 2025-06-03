@@ -56,7 +56,7 @@ def run_analyze(matrix, metadata, group, case, control, covariates, outdir, prot
     result_iso_anno.index.name = 'transcript_id'
     result_iso_anno = result_iso_anno.sort_values('pvalue')
     click.echo("✅ Isoform-level differential expression completed.")
-    iso_dge_fi = f'{outdir}/results/tables/{case}_vs_{control}.isoform.deg.results.tsv'
+    iso_dge_fi = f'{outdir}/results/tables/{case}_vs_{control}.isoform.dtg.results.tsv'
     result_iso_anno.to_csv(iso_dge_fi, sep='\t')
     click.echo(f"📁 Isoform DEG results saved to: {iso_dge_fi}")
 

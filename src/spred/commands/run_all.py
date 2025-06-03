@@ -76,8 +76,8 @@ def run_all(matrix, metadata, group, case, control, covariates, outdir, protein_
                )
 
     # Step 3: Run enrich for isoform results
-    isoform_results = f"{table_outdfir}/{case}_vs_{control}.isoform.deg.results.tsv"
-    isoform_enrich_prefix =  f"{case}_vs_{control}.isoform.deg"
+    isoform_results = f"{table_outdfir}/{case}_vs_{control}.isoform.dtg.results.tsv"
+    isoform_enrich_prefix =  f"{case}_vs_{control}.isoform.dtg"
     click.echo(f"⏳ Running enrich for isoform results: {isoform_results}")
     run_enrich(infile=isoform_results, outdir=enrich_outdir, prefix=isoform_enrich_prefix, 
             protein_coding=protein_coding, species=species, multitest='hs',
