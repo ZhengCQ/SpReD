@@ -42,6 +42,9 @@ pip install spred
 | ENST00000419091.7 | 67    | 125   | 61    | 11       | 12       | 67       |
 | ENST00000452621.6 | 42    | 59    | 52    | 95       | 59       | 84       |
 
+* Rows: Transcript-level identifiers (e.g., Ensembl IDs)
+* Columns: Sample names (must match group file)
+
 ### 2. Group File (`group.tsv`)
 
 | Sample   | Group   |
@@ -52,18 +55,19 @@ pip install spred
 | Control1 | Control |
 | Control2 | Control |
 | Control3 | Control |
-
+* `Sample`: Must match column names in the count matrix
+* `Group`: Define condition labels (e.g., Case vs Control)
 ---
 
 ## Quick Start
 
-### 1. Run the full pipeline: analysis, enrichment, and plotting
+### 1. Run the full pipeline including analysis, enrichment, and visualization: 
 
 ```bash
 spred run-all -m matrix.count.input.tsv -e group.tsv -g Group -c1 Case -c2 Control -o outdir --species human
 ```
 
-### 2. Run the analysis module only
+### 2. Run the differential analysis module (`analyze`) 
 
 This module performs the following comparisons between Case and Control groups:
 
@@ -75,9 +79,9 @@ This module performs the following comparisons between Case and Control groups:
 spred analyze -m matrix.count.input.tsv -e group.tsv -g Group -c1 Case -c2 Control -o outdir --species human
 ```
 
-### 3. Run functional enrichment analysis
+### 3. Run functional enrichment analysis (`enrich`)
 
-Supports multiple correction methods and species-specific annotations.
+Performs GO/KEGG enrichment analysis on results from DGE, DTE, or SDG. Supports multiple correction methods
 
 ```bash
 spred enrich -i outdir/results/tables/Case_vs_Control.gene.deg.results.tsv --protein-coding --multitest hs
@@ -85,14 +89,14 @@ spred enrich -i outdir/results/tables/Case_vs_Control.isoform.dte.results.tsv --
 spred enrich -i outdir/results/tables/Case_vs_Control.sdGenes.results.tsv --protein-coding --multitest fdr_bh
 ```
 
-### 4. Generate volcano plots (for DGE and DTE results)
+### 4. Generate volcano plots (for DGE and DTE results) `plot-volcano` 
 
 ```bash
 spred plot-volcano -i outdir/results/tables/kogo/Case_vs_Control.gene.deg.results.for_kogo.table.tsv --filter-lfc 1
 spred plot-volcano -i outdir/results/tables/kogo/Case_vs_Control.isoform.dte.results.for_kogo.table.tsv --filter-lfc 1
 ```
 
-### 5. Generate Mahalanobis plots (for SDG results)
+### 5. Generate Mahalanobis plots (for SDG results) `plot-manhan`
 
 ```bash
 spred plot-manhan -i outdir/results/tables/kogo/Case_vs_Control.sdGenes.results.for_kogo.table.tsv
