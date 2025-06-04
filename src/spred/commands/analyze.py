@@ -50,7 +50,7 @@ def run_analyze(matrix, metadata, group, case, control, covariates, outdir, prot
     is_exits_rate = len(set(df_mtx.index) & set(df_anno.index))/len(set(df_mtx.index))
     click.echo(f"There are {len(set(df_mtx.index) & set(df_anno.index))} out of {len(set(df_mtx.index))} isoform in annotation file") 
     if is_exits_rate < 0.5:
-        raise ValueError("Thre are only {is_exits_rate} isoform in annotation file; Please check {matrix} and {anno_path};")
+        raise ValueError(f"Thre are only {is_exits_rate} isoform in annotation file; Please check {matrix} and {anno_path};")
     else:
         click.echo(f"There are {len(set(df_mtx.index) & set(df_anno.index))} out of {len(set(df_mtx.index))} isoform in annotation file") 
     
