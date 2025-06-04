@@ -46,6 +46,14 @@ def run_analyze(matrix, metadata, group, case, control, covariates, outdir, prot
     # Load annotation
     anno_path = get_annotation_file(species,reference_source)
     df_anno = pd.read_csv(anno_path, sep='\t', index_col=0)
+    
+    is_exits_rate = len(set(df_mtx.index) & set(df_anno.index))/len(set(df_mtx.index))
+    click.echo(f"There are {len(set(df_mtx.index) & set(df_anno.index))} out of {len(set(df_mtx.index))} isoform in annotation file") 
+    if is_exits_rate < 0.5:
+        raise ValueError("Thre are only {is_exits_rate} isoform in annotation file; Please check {matrix} and {anno_path};")
+    else:
+        click.echo(f"There are {len(set(df_mtx.index) & set(df_anno.index))} out of {len(set(df_mtx.index))} isoform in annotation file") 
+    
 
     # Step 1: isoform-level differential expression
     click.echo("⏳ Running isoform-level differential expression analysis...")    

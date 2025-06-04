@@ -40,8 +40,6 @@ import os
     show_default=True,
     help='Reference source: gencode or ncbi'
 )
-@click.option('-o', '--outdir', default='./workdir',
-              help='Output directory.')
 
 
 def run_all(matrix, metadata, group, case, control, covariates, outdir, protein_coding,species,reference_source):
