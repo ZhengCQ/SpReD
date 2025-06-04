@@ -1,8 +1,7 @@
 import os
 import urllib
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'data')
-ANNOTATION_URL = 'https://yourserver.org/path/to/transcript_gene_info.tsv.gz'
+DATA_DIR = os.path.join(os.path.dirname(__file__), 'resource', 'ref')
 
 def get_annotation_file(species, reference_source):
     # Validate species input
@@ -19,13 +18,17 @@ def get_annotation_file(species, reference_source):
     if species.lower() == 'mouse':
         if reference_source.lower() == 'gencode':
             LOCAL_FILENAME = os.path.join(DATA_DIR, 'GRCm39_M36/transcript_gene_info.tsv.gz')
+            ANNOTATION_URL = 'https://github.com/ZhengCQ/SpReD/releases/download/v1.0.0/GRCm39_M36.transcript_gene_info.tsv.gz'
         elif reference_source.lower() == 'ncbi':
             LOCAL_FILENAME = os.path.join(DATA_DIR, 'NCBI_Mm10/transcript_gene_info.tsv.gz')
+            ANNOTATION_URL = ''
     elif species.lower() == 'human':
         if reference_source.lower() == 'gencode':
             LOCAL_FILENAME = os.path.join(DATA_DIR, 'GRCh38_V42/transcript_gene_info.tsv.gz')
+            ANNOTATION_URL = 'https://github.com/ZhengCQ/SpReD/releases/download/v1.0.0/GRCh38_v42.transcript_gene_info.tsv.gz'
         elif reference_source.lower() == 'ncbi':
             LOCAL_FILENAME = os.path.join(DATA_DIR, 'NCBI_Hg38/transcript_gene_info.tsv.gz')
+            ANNOTATION_URL = ''
 
     # Ensure the annotation file is available and return its path
     if not os.path.exists(LOCAL_FILENAME):
