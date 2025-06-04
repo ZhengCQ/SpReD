@@ -1,7 +1,7 @@
 import os
 import urllib
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), 'resource', 'ref')
+DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'resource', 'ref')
 
 def get_annotation_file(species, reference_source):
     # Validate species input
@@ -33,7 +33,7 @@ def get_annotation_file(species, reference_source):
     # Ensure the annotation file is available and return its path
     if not os.path.exists(LOCAL_FILENAME):
         os.makedirs(DATA_DIR, exist_ok=True)
-        print(f"Downloading annotation data to {LOCAL_FILENAME} ...")
+        print(f"Downloading annotation data from {ANNOTATION_URL} to {LOCAL_FILENAME} ...")
         urllib.request.urlretrieve(ANNOTATION_URL, LOCAL_FILENAME)
 
     return LOCAL_FILENAME

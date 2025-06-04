@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spred"
-version = "0.1.1.dev0"
+version = "0.1.1.dev3"
 description = "Splicing-regulatory Driver Genes Identification Tool"
 readme = {file = "README.md", content-type = "text/markdown"}
 license = {text = "MIT"}
@@ -18,7 +18,7 @@ dependencies = [
   "numpy",
   "scipy",
   "statsmodels",
-  "pydeseq2 == 0.4.4",
+  "pydeseq2 == 0.5.1",
   "gseapy==1.1.6",
   "seaborn == 0.13.2"
 ]
