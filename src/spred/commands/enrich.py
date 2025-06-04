@@ -138,8 +138,6 @@ def run_enrich(infile, outdir, protein_coding, multitest, gene_columns,
               help='Column name for adjusted p-values.')
 @click.option('--gene-type-columns', default='gene_type',
               help='Column name for gene type info.')
-@click.option('--gene-type-columns', default='gene_type',
-              help='Column name for gene type info.')
 @click.option('--lfc-columns', default='log2FoldChange',
               help='log2FoldChange name for gene type info.')
 

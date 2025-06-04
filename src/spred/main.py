@@ -11,7 +11,7 @@ except ImportError:
     from importlib_metadata import version, PackageNotFoundError
 
 try:
-    __version__ = version("my-package")  # 这里用的是 pyproject.toml 中的项目名
+    __version__ = version("spred")  # 这里用的是 pyproject.toml 中的项目名
 except PackageNotFoundError:
     __version__ = "unknown"
 

@@ -4,11 +4,6 @@ from .enrich import run_enrich
 from .plot import run_plot_volcano, run_plot_manhan
 import os
 
-# cli.add_command(analyze)
-# cli.add_command(enrich)
-# cli.add_command(plot_volcano)
-# cli.add_command(plot_manhan)
-
 @click.command(name="run-all")
 @click.option('-m', '--matrix', type=click.Path(exists=True), required=True,
               help='Input gene expression matrix (rows: genes, columns: samples).')
