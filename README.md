@@ -9,7 +9,7 @@ SpReD-GIT is a computational tool for identifying splicing-regulatory driver gen
 ## Prerequisites
 
 ```bash
-Python >= 3.7 (Python 3.8 recommended)
+Python >= 3.10
 ```
 
 ---
@@ -19,7 +19,7 @@ Python >= 3.7 (Python 3.8 recommended)
 Recommended installation using Conda:
 
 ```bash
-conda create -n SpReD python==3.8
+conda create -n SpReD python==3.10
 conda activate SpReD
 pip install spred
 ```
